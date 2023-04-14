@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "c674c05d-bb19-4068-b579-8e85eb636704",
+		"name": "duff",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Beer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"temperatureRange\": [-8, 2],\n    \"style\": \"Dunkel\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/beers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"beers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Beer By Temperature",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"temperature\": -2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/beers/temperature",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"beers",
+						"temperature"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Beer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/beers/tteste",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"beers",
+						"tteste"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Beer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/beers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"beers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Beer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"temperatureRange\": [1, 10],\n    \"style\": \"IPA - German\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/beers/84502165-60f6-4639-aefe-32bcb4bdfab1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"beers",
+						"84502165-60f6-4639-aefe-32bcb4bdfab1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
