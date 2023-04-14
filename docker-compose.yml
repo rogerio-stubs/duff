@@ -1,0 +1,25 @@
+version: '3'
+services:
+  db:
+    image: postgres:13.0
+    container_name: dbDuff
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - 5432:5432
+
+  app:
+    image: node:17
+    container_name: apiDuff
+    working_dir: /app
+    command: yarn start:dev
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+    depends_on:
+      - db
